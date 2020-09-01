@@ -52,11 +52,11 @@
             <div id="footer-bar" class="footer-bar-6">
                 <a href="{{ route('courses') }}" class="{{ request()->is('/courses') ? 'active-nav' : '' }}"><i
                         class="fa fa-file"></i><span>Courses</span></a>
-                <a href="{{ route('blogs') }}" class=""><i class="fa fa-file"></i><span>Blogs</span></a>
+                <a href="{{ route('blogs') }}" class=""><i class="fa fa-book"></i><span>Blogs</span></a>
                 <a href="{{ route('homepage') }}" class="circle-nav {{ request()->is('/') ? 'active-nav' : '' }}"><i
                         class="fa fa-home"></i><span>Home</span></a>
                 <a href="{{ route('enroll') }}" class="{{ request()->is('/enroll') ? 'active-nav' : '' }}"><i
-                        class="fa fa-camera"></i><span>Enrollment</span></a>
+                        class="fa fa-graduation-cap"></i><span>Enrollment</span></a>
                 <a href="#" data-menu="menu-main"><i class="fa fa-bars"></i><span>Menu</span></a>
             </div>
 
