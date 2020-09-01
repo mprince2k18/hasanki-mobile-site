@@ -13,7 +13,7 @@
 
 
                 <div class="card-top">
-                    <a href="#" data-menu="menu-cart" class="icon icon-s bg-white color-black rounded-xl p-2 mt-3 mr-2 float-right">ENROLL</a>
+                    <a href="{{ route('enroll') }}" class="icon icon-s bg-white color-black rounded-xl p-2 mt-3 mr-2 float-right">ENROLL</a>
                 </div>
 
 
