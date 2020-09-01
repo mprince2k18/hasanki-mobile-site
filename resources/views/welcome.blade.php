@@ -98,7 +98,7 @@
 
     <div class="card card-fixed mb-n5" data-card-height="350">
         <div class="map-full">
-        <iframe src="https://maps.google.com/?ie=UTF8&amp;ll=47.595131,-122.330414&amp;spn=0.006186,0.016512&amp;t=h&amp;z=17&amp;output=embed"></iframe>
+        <iframe src="{{ getSystemSetting('type_map') }}"></iframe>
         </div>
         </div>
 
@@ -111,36 +111,34 @@
 
 <div class="divider mt-4"></div>
 
-<h3 class="font-700">Envato Headquarters</h3>
-<p class="pb-0 mb-0">121 King Street, Melbourne</p>
-<p class="pb-0 mb-0">PO Box 16122 Collins Street West</p>
-<p class="pb-0">Victoria 3000 Australia</p>
+<h3 class="font-700">{{ getSystemSetting('type_name') }} Office</h3>
+<p class="pb-0 mb-0">{{ getSystemSetting('type_address') }}</p>
 <div class="list-group list-custom-small">
 <a href="tel:+1 234 567 890">
 <i class="fa font-14 fa-phone color-phone"></i>
-<span>+1 234 567 8900</span>
-<span class="badge bg-highlight">TAO TO CALL</span>
+<span>{{ getSystemSetting('type_number') }}/span>
+<span class="badge bg-highlight">TAP TO CALL</span>
 <i class="fa fa-angle-right"></i>
 </a>
 <a href="mailto:mail@domain.com">
 <i class="fa font-14 fa-envelope color-mail"></i>
-<span>mail@domain.com</span>
-<span class="badge bg-highlight">TAO TO MAIL</span>
+<span>{{ getSystemSetting('type_mail') }}</span>
+<span class="badge bg-highlight">TAP TO MAIL</span>
 <i class="fa fa-angle-right"></i>
 </a>
-<a href="https://www.facebook.com/enabled.labs/">
+<a href="{{ getSystemSetting('type_fb') }}">
 <i class="fab font-14 fa-facebook color-facebook"></i>
-<span>enabled.labs</span>
+<span>{{ getSystemSetting('type_fb') }}</span>
 <i class="fa fa-link"></i>
 </a>
-<a href="https://twitter.com/iEnabled">
-<i class="fab font-14 fa-twitter-square color-twitter"></i>
-<span>@iEnabled</span>
+<a href="{{ getSystemSetting('type_youtube') }}">
+<i class="fab font-14 fa-youtube-square color-twitter"></i>
+<span>{{ getSystemSetting('type_youtube') }}</span>
 <i class="fa fa-link"></i>
 </a>
-<a href="#" class="border-0">
+<a href="{{ getSystemSetting('type_linked') }}" class="border-0">
 <i class="fab font-14 fa-linkedin color-linkedin"></i>
-<span>@Enabled</span>
+<span>{{ getSystemSetting('type_linked') }}</span>
 <i class="fa fa-link"></i>
 </a>
 </div>

@@ -34,6 +34,7 @@ class ComposerStaticInit7421d680b489040de5627e89970dc5cb
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '92c1b38d4675fce54491776e674b6d3a' => __DIR__ . '/../..' . '/app/Http/Helpers/Helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -515,10 +516,14 @@ class ComposerStaticInit7421d680b489040de5627e89970dc5cb
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
+        'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
+        'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
         'App\\Models\\Enroll' => __DIR__ . '/../..' . '/app/Models/Enroll.php',
         'App\\Models\\FormHelp' => __DIR__ . '/../..' . '/app/Models/FormHelp.php',
         'App\\Models\\FormQuestion' => __DIR__ . '/../..' . '/app/Models/FormQuestion.php',
         'App\\Models\\Occupation' => __DIR__ . '/../..' . '/app/Models/Occupation.php',
+        'App\\Models\\Page' => __DIR__ . '/../..' . '/app/Models/Page.php',
         'App\\Models\\Payment' => __DIR__ . '/../..' . '/app/Models/Payment.php',
         'App\\Models\\Schedule' => __DIR__ . '/../..' . '/app/Models/Schedule.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
