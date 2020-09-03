@@ -23,11 +23,9 @@
 
 <div class="card card-style">
 
-    <form action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data" novalidate class="needs-validation">
+    <form action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data">
 
         @csrf
-
-    
     <div class="content mb-2">
         
         <p class="font-16 mt-n1 mb-0 pb-2">
@@ -41,10 +39,14 @@
             <i class="input-icon fa fa-user"></i>
             <span class="color-highlight input-style-1-inactive">Name</span>
             <em>(required)</em>
-            <input class="form-control" name="name" type="text" placeholder="Name" required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
+            <input class="form-control @error('name') is-invalid @enderror" name="name" type="text" placeholder="Name" required>
+
+            @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+           
         </div>
 
 
@@ -52,7 +54,7 @@
             <i class="input-icon fa fa-envelope"></i>
             <span class="color-highlight input-style-1-inactive">Email</span>
             <em>(required)</em>
-            <input class="form-control" name="email" type="email" placeholder="Email">
+            <input class="form-control" name="email" type="email" placeholder="Email" required>
         </div>
 
 
@@ -60,14 +62,14 @@
             <i class="input-icon fa fa-mobile"></i>
             <span class="color-highlight input-style-1-inactive">Contact Number</span>
             <em>(required)</em>
-            <input class="form-control" name="phone" type="number" placeholder="Contact Number">
+            <input class="form-control" name="phone" type="number" placeholder="Contact Number" required>
         </div>
 
         <div class="input-style input-style-2 input-required mt-2">
             
             <span><i class="fa fa-briefcase"></i> Your Occupation?</span>
             <em><i class="fa fa-angle-down"></i></em>
-            <select class="form-control" name="occupation_id">
+            <select class="form-control" name="occupation_id" required>
                 <option value="default" disabled selected>Your Occupation?</option>
 
                 @foreach ($occupations as $occupation)
@@ -81,11 +83,8 @@
             <i class="input-icon fa fa-mobile"></i>
             <span class="color-highlight input-style-1-inactive">Your Age</span>
             <em>(required)</em>
-            <input class="form-control" name="age" type="number" placeholder="Your Age">
+            <input class="form-control" name="age" type="number" placeholder="Your Age" required>
         </div>
-
-
-        
 
     </div>
 </div>
@@ -121,7 +120,7 @@
         <div class="input-style input-style-2 input-required mt-2">
             <span>Your level?</span>
             <em><i class="fa fa-angle-down"></i></em>
-            <select class="form-control" name="study_level">
+            <select class="form-control" name="study_level" required>
                 <option value="default" disabled selected>Your level?</option>
 
                 	<option value="">Select level*</option>
@@ -146,7 +145,7 @@
         <div class="input-style input-style-2 input-required mt-2">
             <span>Your Course?</span>
             <em><i class="fa fa-angle-down"></i></em>
-            <select class="form-control" id="course_id" name="course_id">
+            <select class="form-control" id="course_id" name="course_id" required>
                 <option value="default" disabled selected>Your Course?</option>
 
                 	@foreach ($courses as $course)
@@ -171,7 +170,7 @@
         <div class="input-style input-style-2 input-required mt-2">
             <span>Your Class Schedule?</span>
             <em><i class="fa fa-angle-down"></i></em>
-            <select class="form-control" name="schedule_id">
+            <select class="form-control" name="schedule_id" required>
                 <option value="default" disabled selected>Your Class Schedule?</option>
 
                 	@foreach ($schedules as $schedule)
@@ -192,7 +191,7 @@
         <div class="input-style input-style-2 input-required mt-2">
             <span>Select Payment Type</span>
             <em><i class="fa fa-angle-down"></i></em>
-            <select class="form-control" name="payment_id">
+            <select class="form-control" name="payment_id" required>
                 <option value="default" disabled selected>Select Payment Type</option>
 
                 	@foreach ($payments as $payment)
@@ -213,7 +212,7 @@
         <div class="input-style input-style-2 input-required">
             <span class="input-style-1-inactive">Write here</span>
             <em>(required)</em>
-            <textarea class="form-control" name="description" placeholder=""></textarea>
+            <textarea class="form-control" name="description" placeholder="" required></textarea>
         </div>
 
 
@@ -228,7 +227,7 @@
         <div class="input-style input-style-2 input-required">
             <span class="input-style-1-inactive">Write here</span>
             <em>(required)</em>
-            <textarea class="form-control" name="guardian_phone" placeholder=""></textarea>
+            <textarea class="form-control" name="guardian_phone" placeholder="" required></textarea>
         </div>
 
 
