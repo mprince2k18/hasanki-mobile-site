@@ -7,7 +7,7 @@
     <div class="single-slider owl-carousel owl-no-dots">
 
         {{-- TODO COURSE LOOP--}}
-        {{-- @foreach ($courses['data'] as $course)
+        @foreach ($courses['data'] as $course)
         <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')">
             <a href="#">
 
@@ -26,7 +26,7 @@
             </a>
             <div class="card-overlay bg-black opacity-60"></div>
         </div>
-        @endforeach --}}
+        @endforeach
         {{-- TODO --}}
 
 
@@ -37,7 +37,7 @@
     <div class="double-slider owl-carousel owl-no-dots mb-4">
 
         {{-- TODO:: BLOG LOOP --}}
-        {{-- @foreach ($blogs as $blog)
+        @foreach ($blogs as $blog)
         <div>
             <a href="{{ route('blog.single', $blog['id']) }}">
                 <div class="card m-0 card-style bg-20" style="background-image:url('{{ $blog['thumbnail'] }}')" data-card-height="250"></div>
@@ -45,7 +45,7 @@
                 <span>{{ $blog['user']['name'] }}</span>
             </a>
         </div>
-        @endforeach --}}
+        @endforeach
         {{-- TODO:: BLOG LOOP --}}
       
     </div>
@@ -77,7 +77,7 @@
 
         {{-- TODO TEAM LOOP--}}
 
-        {{-- @foreach ($teams as $team)
+        @foreach ($teams as $team)
         <div class="card card-style bg-19 team-card" data-card-height="300" style="background-image:url('{{ $team['photo'] }}')">
             <a href="#">
                 <div class="card-bottom mb-3 ml-3 mr-3">
@@ -89,14 +89,14 @@
             </a>
             <div class="card-overlay bg-black opacity-60"></div>
         </div>
-        @endforeach --}}
+        @endforeach
 
         {{-- TODO --}}
     </div>
 
     {{-- CONTACT --}}
 
-    <div class="card card-fixed mb-n5" data-card-height="350">
+    <div class="card mb-n5" data-card-height="350">
         <div class="map-full">
         <iframe src="{{ getSystemSetting('type_map') }}"></iframe>
         </div>
