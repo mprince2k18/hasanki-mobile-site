@@ -23,7 +23,7 @@
 
 <div class="card card-style">
 
-    <form action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data" novalidate class="">
+    <form action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data" novalidate class="needs-validation">
 
         @csrf
 
@@ -41,7 +41,10 @@
             <i class="input-icon fa fa-user"></i>
             <span class="color-highlight input-style-1-inactive">Name</span>
             <em>(required)</em>
-            <input class="form-control" name="name" type="text" placeholder="Name">
+            <input class="form-control" name="name" type="text" placeholder="Name" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
 
 
