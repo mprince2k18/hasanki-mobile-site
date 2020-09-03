@@ -114,8 +114,7 @@ class HomeController extends Controller
                               ->first();
 
         if (isset($check_exist)) {
-        //   Alert::success('Exist','You Already Enrolled This Course.');
-          return back();
+          return back()->with("status", "You Already Enrolled This Course.");
         }else {
           Enroll::create($request->except('_token'));
 
@@ -126,9 +125,6 @@ class HomeController extends Controller
 
           Mail::to('hasanikenglish@gmail.com')->send(new AdminNotifyMail($name, $phone));
 
-          return back();
-
-        //   Alert::success('success','DONE');
           return redirect()->route('enroll.success');
         }
 

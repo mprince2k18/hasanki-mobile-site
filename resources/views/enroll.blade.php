@@ -6,6 +6,22 @@
         <h1>Enroll Course</h1>
     </div>
 </div>
+
+
+<div class="card card-style">
+    <div class="content text-center">
+
+        @if ($message = Session::get('status'))
+        <div class="alert alert-warning alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>	
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
+
+    </div>
+</div>
+
+
 <div class="card card-style">
 
     <form action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data">
