@@ -11,23 +11,20 @@ use App\Models\Schedule;
 use App\Models\Payment;
 use App\Models\Blog;
 use App\Models\Course;
+use App\Models\Page;
 
 class HomeController extends Controller
 {
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        //
     }
 
     /**
      * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
@@ -38,7 +35,9 @@ class HomeController extends Controller
         return view('welcome', compact('courses', 'blogs', 'teams'));
     }
 
-
+    /**
+     * courses
+     */
     public function courses()
     {
         $courses    = json_decode(file_get_contents('https://hasanikenglish.com/api/courses'), true);
@@ -46,7 +45,9 @@ class HomeController extends Controller
         return view('courses', compact('courses'));
     }
 
-
+    /**
+     * single_courses
+     */
     public function single_courses($slug)
     {
         $course    = Course::where('slug',$slug)->first();
@@ -54,7 +55,9 @@ class HomeController extends Controller
         return view('single_course', compact('course'));
     }
 
-
+    /**
+     * blogs
+     */
     public function blogs()
     {
         $blogs      = json_decode(file_get_contents('https://hasanikenglish.com/api/blogs'), true);
@@ -62,7 +65,9 @@ class HomeController extends Controller
         return view('blogs', compact('blogs'));
     }
 
-
+    /**
+     * blog
+     */
     public function blog($id)
     {
         $single_blog = Blog::where('id',$id)->with('category')
@@ -71,9 +76,11 @@ class HomeController extends Controller
         return view('single_blog',compact('single_blog'));
     }
 
+    /**
+     * enroll
+     */
     public function enroll()
     {
-
         $occupations = Occupation::all();
         $schedules = Schedule::all();
         $payments = Payment::all();
@@ -83,10 +90,11 @@ class HomeController extends Controller
         return view('enroll',compact('occupations','schedules','payments','questions','courses','tips'));
     }
 
-
+    /**
+     * enroll_store
+     */
     public function enroll_store(Request $request)
     {
-
       $request->validate([
             'name' => 'required',
             'email' => 'required',
@@ -108,17 +116,17 @@ class HomeController extends Controller
         }else {
           Enroll::create($request->except('_token'));
 
-        //   $name = $request->name;
-        //   $email = $request->email;
-        //   $phone = $request->phone;
-        //   Mail::to($email)->send(new Enrollmail($name));
+          $name = $request->name;
+          $email = $request->email;
+          $phone = $request->phone;
+          Mail::to($email)->send(new Enrollmail($name));
 
-        //   Mail::to('hasanikenglish@gmail.com')->send(new AdminNotifyMail($name, $phone));
+          Mail::to('hasanikenglish@gmail.com')->send(new AdminNotifyMail($name, $phone));
 
           return back();
 
-        //   Alert::success('success','DONE');
-        //   return redirect()->route('enroll.success');
+          Alert::success('success','DONE');
+          return redirect()->route('enroll.success');
         }
 
     }
@@ -135,5 +143,27 @@ class HomeController extends Controller
         return response()->json($course_price, 200);
     }
 
+    /**
+     * ABOUT
+     */
 
+    public function about()
+    {
+        $about = Page::where('type','about')->first();
+        return view('about_us', compact('about'));
+    }
+
+    /**
+     * OUR MISSION
+     */
+
+    public function our_mission()
+    {
+        $our_mission = Page::where('type','mission')->first();
+        return view('our_mission', compact('our_mission'));
+    }
+
+    /**
+     * END
+     */
 }

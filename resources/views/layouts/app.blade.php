@@ -43,10 +43,10 @@
 
             <div class="header header-fixed header-logo-center header-auto-show">
                 <a href="{{ route('homepage') }}" class="header-title">Hasanik English</a>
-                <a href="#" data-menu="menu-main" class="header-icon header-icon-4"><i class="fas fa-bars"></i></a>
-                <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-dark"><i
+                <a href="javascript:void()" data-menu="menu-main" class="header-icon header-icon-4"><i class="fas fa-bars"></i></a>
+                <a href="javascript:void()" data-toggle-theme class="header-icon header-icon-3 show-on-theme-dark"><i
                         class="fas fa-sun"></i></a>
-                <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-light"><i
+                <a href="javascript:void()" data-toggle-theme class="header-icon header-icon-3 show-on-theme-light"><i
                         class="fas fa-moon"></i></a>
             </div>
             <div id="footer-bar" class="footer-bar-6">
@@ -57,22 +57,22 @@
                         class="fa fa-home"></i><span>Home</span></a>
                 <a href="{{ route('enroll') }}" class="{{ request()->is('/enroll') ? 'active-nav' : '' }}"><i
                         class="fa fa-graduation-cap"></i><span>Enrollment</span></a>
-                <a href="#" data-menu="menu-main"><i class="fa fa-bars"></i><span>Menu</span></a>
+                <a href="javascript:void()" data-menu="menu-main"><i class="fa fa-bars"></i><span>Menu</span></a>
             </div>
 
 
 
             <div class="page-title page-title-fixed">
                 <h1>Hasanik English</h1>
-                <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light"
+                <a href="javascript:void()" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light"
                     data-toggle-theme><i class="fa fa-moon"></i></a>
-                <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark"
+                <a href="javascript:void()" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark"
                     data-toggle-theme><i class="fa fa-lightbulb color-yellow-dark"></i></a>
 
 
 
 
-                <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-main">
+                <a href="javascript:void()" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-main">
                     <i class="fa fa-bars"></i>
                 </a>
 
@@ -100,7 +100,7 @@
                     <span>Homepage</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
-                <a href="#">
+                <a href="{{ route('about') }}">
                     <i class="fa fa-exclamation-circle gradient-blue color-white"></i>
                     <span>About Us</span>
                     <i class="fa fa-angle-right"></i>
@@ -136,31 +136,11 @@
             data-menu-width="100%" data-menu-height="100%" data-menu-active="nav-pages"></div>
         <div id="menu-main-modal" class="menu menu-box-modal rounded-0 rounded-m" data-menu-load="menu-main.html"
             data-menu-width="350" data-menu-height="500" data-menu-active="nav-pages"></div>
-
-
-
         <div id="about-modal" class="menu menu-box-modal rounded-0 rounded-m" data-menu-load="menu-main.html"
             data-menu-width="800" data-menu-height="500" data-menu-active="nav-pages">
-        <div>
-             @php
-         $about = App\Models\Page::where('type','about')->first();   
-        @endphp
-
-        {!! $about->desc  !!}
         </div>
-       
-        
-        
-        </div>
-
-
     </div>
 
-
-
-
-
-    -
     {{-- js --}}
     <script type="text/javascript" src="{{ asset('frontend/scripts/jquery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('frontend/scripts/bootstrap.min.js') }}"></script>
