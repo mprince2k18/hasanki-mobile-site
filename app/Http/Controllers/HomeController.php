@@ -12,6 +12,9 @@ use App\Models\Payment;
 use App\Models\Blog;
 use App\Models\Course;
 use App\Models\Page;
+use Mail;
+use App\Mail\Enrollmail;
+use App\Mail\AdminNotifyMail;
 
 class HomeController extends Controller
 {
