@@ -11,21 +11,19 @@
 
 
         @if ($message = Session::get('status'))
-            <div class="card card-style">
-                <div class="content text-center">
-                    <div class="alert alert-warning alert-block">
-                        <button type="button" class="close" data-dismiss="alert">×</button>	
-                            <strong>{{ $message }}</strong>
-                    </div>
-                </div>
+            
+            <div class="alert alert-warning alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>	
+                 <strong>{{ $message }}</strong>
             </div>
+            
         @endif
 
 
 
 <div class="card card-style">
 
-    <form action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data" novalidate class="">
 
         @csrf
 
