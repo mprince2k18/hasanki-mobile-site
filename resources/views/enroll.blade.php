@@ -8,18 +8,19 @@
 </div>
 
 
-<div class="card card-style">
-    <div class="content text-center">
+
 
         @if ($message = Session::get('status'))
-        <div class="alert alert-warning alert-block">
-            <button type="button" class="close" data-dismiss="alert">×</button>	
-                <strong>{{ $message }}</strong>
-        </div>
+            <div class="card card-style">
+                <div class="content text-center">
+                    <div class="alert alert-warning alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>	
+                            <strong>{{ $message }}</strong>
+                    </div>
+                </div>
+            </div>
         @endif
 
-    </div>
-</div>
 
 
 <div class="card card-style">
