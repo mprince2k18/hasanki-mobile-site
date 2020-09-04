@@ -23,6 +23,5 @@
     <div class="divider divider-margins"></div>
 
 
-<div data-menu-load="menu-footer.html"></div>
 </div>
 @endsection

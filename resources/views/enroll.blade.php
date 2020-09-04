@@ -248,5 +248,4 @@
 </form>
 
 
-<div data-menu-load="menu-footer.html"></div>
 @endsection
