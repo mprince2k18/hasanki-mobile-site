@@ -34,7 +34,7 @@
     <div class=" mb-3">
         <h1 class="font-17"><a href="javascript:void()" class="px-3 color-theme">Blogs</a></h1>
     </div>
-    <div class="double-slider owl-carousel owl-no-dots mb-4">
+    <div class="single-slider owl-carousel owl-no-dots mb-4">
 
         {{-- TODO:: BLOG LOOP --}}
         @foreach ($blogs as $blog)
