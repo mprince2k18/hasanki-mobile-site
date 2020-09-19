@@ -20,7 +20,7 @@
                 <div class="card-bottom mb-3 ml-3 mr-3">
                     <h1 class="color-white font-800 mb-n2">{{ $course['name'] }}</h1>
                     <p class="color-white font-14 mb-2 opacity-60">
-                        ${{$course['price']}}
+                        ৳{{$course['price']}}
                     </p>
                 </div>
             </a>
