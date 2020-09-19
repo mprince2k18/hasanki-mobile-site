@@ -102,7 +102,7 @@
         </div>
         </div> --}}
 
-        <div class="card card-clear" data-card-height="350"></div>
+        {{-- <div class="card card-clear" data-card-height="350"></div> --}}
 
 <div class="drag-line"></div>
 <div class="content">
