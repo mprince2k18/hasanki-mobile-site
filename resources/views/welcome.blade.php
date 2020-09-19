@@ -96,11 +96,11 @@
 
     {{-- CONTACT --}}
 
-    <div class="card mb-n5" data-card-height="350">
+    {{-- <div class="card mb-n5" data-card-height="350">
         <div class="map-full">
         <iframe src="{{ getSystemSetting('type_map') }}"></iframe>
         </div>
-        </div>
+        </div> --}}
 
         <div class="card card-clear" data-card-height="350"></div>
 
