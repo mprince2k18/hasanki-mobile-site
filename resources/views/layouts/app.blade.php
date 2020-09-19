@@ -77,7 +77,7 @@
 
 
             <div class="page-title page-title-fixed">
-                <img src="{{ getSystemSetting('type_logo') }}" class="w-50" alt="{{ getSystemSetting('type_name') }}">
+                <img src="{{ filePath(getSystemSetting('type_logo')) }}" class="w-50" alt="{{ getSystemSetting('type_name') }}">
                 <a href="javascript:void()" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light"
                     data-toggle-theme><i class="fa fa-moon"></i></a>
                 <a href="javascript:void()" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark"
