@@ -29,6 +29,10 @@
         background-repeat: no-repeat;
     }
 
+    .w-40{
+        width: 40%;
+    }
+
 </style>
 
         <script>
@@ -56,7 +60,9 @@
         <div id="page">
 
             <div class="header header-fixed header-logo-center header-auto-show">
-                <a href="{{ route('homepage') }}" class="header-title">Hasanik English</a>
+                <a href="{{ route('homepage') }}" class="header-title">
+                    <img src="https://hasanikenglish.com/{{getSystemSetting('type_logo') }}" class="w-50" alt="{{ getSystemSetting('type_name') }}">
+                </a>
                 <a href="javascript:void()" data-menu="menu-main" class="header-icon header-icon-4"><i class="fas fa-bars"></i></a>
                 <a href="javascript:void()" data-toggle-theme class="header-icon header-icon-3 show-on-theme-dark"><i
                         class="fas fa-sun"></i></a>
@@ -77,7 +83,9 @@
 
 
             <div class="page-title page-title-fixed">
-                <img src="https://hasanikenglish.com/{{getSystemSetting('type_logo') }}" class="w-50" alt="{{ getSystemSetting('type_name') }}">
+                <h1>
+                    <img src="https://hasanikenglish.com/{{getSystemSetting('type_logo') }}" class="w-40" alt="{{ getSystemSetting('type_name') }}">
+                </h1>
                 <a href="javascript:void()" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light"
                     data-toggle-theme><i class="fa fa-moon"></i></a>
                 <a href="javascript:void()" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark"
