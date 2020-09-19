@@ -86,7 +86,7 @@
 
 
 
-                <a href="javascript:void()" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-main">
+                <a href="#!" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-main">
                     <i class="fa fa-bars"></i>
                 </a>
 
@@ -96,12 +96,9 @@
             </div>
 
             <div class="page-title-clear"></div>
-
-
+            
             @yield('content')
-            {{-- Vue compo --}}
-            {{-- <App></App> --}}
-            {{-- Vue compo --}}
+
         </div>
 
 

@@ -18,7 +18,7 @@
     <div class="mr-auto">
     </div>
     <div>
-        <a href="#" class="btn btn-full btn-s font-600 rounded-s gradient-highlight mt-1 float-left ">Read More</a>
+        <a href="{{ route('blog.single', $blog['id']) }}" class="btn btn-full btn-s font-600 rounded-s gradient-highlight mt-1 float-left ">Read More</a>
     </div>
     </div>
     </div>
