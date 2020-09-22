@@ -9,6 +9,7 @@
     <h1>{{ $course->name }}</h1>
     <p class="opacity-60 text-uppercase font-10 mt-n2 font-600 mb-1">${{$course->price}}</p>
 
+    <p>{!! $course->short_desc !!}</p>
     <p>{!! $course->big_desc !!}</p>
     
     <div class="d-flex">
