@@ -15,10 +15,10 @@
             <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')"></div>
 
                 <div class="mb-3 ml-3 mr-3">
-                        <p class="color-black font-14">
+                        <span class="color-black font-14">
                             Our courses
-                        </p>
-                        <h1 class="color-black font-800 mb-n2">{{ $course['name'] }}</h1>
+                        </span>
+                        <h1 class="color-black font-800">{{ $course['name'] }}</h1>
                         <p class="color-black font-14 mb-2">
                             ৳{{$course['price']}}
                         </p>
@@ -72,20 +72,28 @@
     </div>
 
     {{-- TODO:: TEAM --}}
+
+     <div class="mt-3">
+        <h1 class="font-17"><a href="javascript:void()" class="px-3 color-theme">Our teams</a></h1>
+    </div>
+
     <div class="single-slider owl-carousel owl-no-dots">
 
         {{-- TODO TEAM LOOP--}}
 
         @foreach ($teams as $team)
-        <div class="card card-style bg-19 team-card" data-card-height="300" style="background-image:url('{{ $team['photo'] }}')">
-            <a href="#">
-                <div class="card-bottom mb-3 ml-3 mr-3">
-                    <h1 class="color-white font-800 mb-n2">{{ $team['name'] }}</h1>
-                    <p class="color-white font-14 mb-2">
-                        {{ $team['position'] }}
-                    </p>
-                </div>
-            </a>
+        <div>
+
+            <div class="card card-style bg-19 team-card" data-card-height="300" style="background-image:url('{{ $team['photo'] }}')"></div>
+
+             <div class="mb-3 ml-3 mr-3">
+          
+                        <h1 class="color-black font-800 mb-n2">{{ $team['name'] }}</h1>
+                        <p class="color-black font-14 mb-2">
+                            {{ $team['position'] }}
+                        </p>
+                    </div>
+
         </div>
         @endforeach
 
