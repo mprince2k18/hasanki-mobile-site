@@ -8,25 +8,26 @@
 
         {{-- TODO COURSE LOOP--}}
             @foreach ($courses['data'] as $course)
+            <div>
+
+            
             <a href="{{ route('course.single', $course['slug']) }}">
             <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')">
 
-                    <div class="card-top">
-                        <a href="{{ route('enroll') }}" class="icon icon-s bg-white color-black rounded-xl p-2 mt-3 mr-2 float-right">ENROLL</a>
-                    </div>
 
                     <div class="card-bottom mb-3 ml-3 mr-3">
-                        <p class="color-white font-14 mb-2 opacity-60">
+                        <p class="color-black font-14 mb-2">
                             course
                         </p>
-                        <h1 class="color-white font-800 mb-n2">{{ $course['name'] }}</h1>
-                        <p class="color-white font-14 mb-2 opacity-60">
+                        <h1 class="color-black font-800 mb-n2">{{ $course['name'] }}</h1>
+                        <p class="color-black font-14 mb-2">
                             ৳{{$course['price']}}
                         </p>
                     </div>
 
                 </div>
             </a>
+            </div>
             @endforeach
         {{-- TODO --}}
 
@@ -83,12 +84,11 @@
             <a href="#">
                 <div class="card-bottom mb-3 ml-3 mr-3">
                     <h1 class="color-white font-800 mb-n2">{{ $team['name'] }}</h1>
-                    <p class="color-white font-14 mb-2 opacity-60">
+                    <p class="color-white font-14 mb-2">
                         {{ $team['position'] }}
                     </p>
                 </div>
             </a>
-            <div class="card-overlay bg-black opacity-60"></div>
         </div>
         @endforeach
 
@@ -106,9 +106,6 @@
         {{-- <div class="card card-clear" data-card-height="350"></div> --}}
 
 <div class="drag-line"></div>
-<div class="content">
-<h1>Contact Us</h1>
-<p>
 
 <div class="divider mt-4"></div>
 
