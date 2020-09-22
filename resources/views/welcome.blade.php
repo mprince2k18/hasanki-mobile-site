@@ -15,8 +15,8 @@
             <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')"></div>
 
                 <div class="mb-3 ml-3 mr-3">
-                        <p class="color-black font-14 mb-2">
-                            course
+                        <p class="color-black font-14">
+                            Our courses
                         </p>
                         <h1 class="color-black font-800 mb-n2">{{ $course['name'] }}</h1>
                         <p class="color-black font-14 mb-2">
@@ -30,8 +30,8 @@
 
 
     </div>
-    <div class=" mb-3">
-        <h1 class="font-17"><a href="javascript:void()" class="px-3 color-theme">Blogs</a></h1>
+    <div class="mt-3">
+        <h1 class="font-17"><a href="javascript:void()" class="px-3 color-theme">Our blogs</a></h1>
     </div>
     <div class="single-slider owl-carousel owl-no-dots mb-4 p-2">
 
