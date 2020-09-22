@@ -8,8 +8,8 @@
 
         {{-- TODO COURSE LOOP--}}
             @foreach ($courses['data'] as $course)
+            <a href="{{ route('course.single', $course['slug']) }}">
             <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')">
-                <a href="{{ route('enroll') }}">
 
                     <div class="card-top">
                         <a href="{{ route('enroll') }}" class="icon icon-s bg-white color-black rounded-xl p-2 mt-3 mr-2 float-right">ENROLL</a>
@@ -25,8 +25,8 @@
                         </p>
                     </div>
 
-                </a>
-            </div>
+                </div>
+            </a>
             @endforeach
         {{-- TODO --}}
 
