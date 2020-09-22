@@ -12,10 +12,9 @@
 
             
             <a href="{{ route('course.single', $course['slug']) }}">
-            <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')">
+            <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')"></div>
 
-
-                    <div class="card-bottom mb-3 ml-3 mr-3">
+                <div class="mb-3 ml-3 mr-3">
                         <p class="color-black font-14 mb-2">
                             course
                         </p>
@@ -24,8 +23,6 @@
                             ৳{{$course['price']}}
                         </p>
                     </div>
-
-                </div>
             </a>
             </div>
             @endforeach
@@ -43,8 +40,8 @@
         <div>
             <a href="{{ route('blog.single', $blog['id']) }}">
                 <div class="card m-0 card-style bg-20" style="background-image:url('{{ $blog['thumbnail'] }}')" data-card-height="250"></div>
-                <h4>{{ $blog['title'] }}</h4>
-                <span>{{ $blog['user']['name'] }}</span>
+                <h4 class="ml-3">{{ $blog['title'] }}</h4>
+                <span class="ml-3">{{ $blog['user']['name'] }}</span>
             </a>
         </div>
         @endforeach

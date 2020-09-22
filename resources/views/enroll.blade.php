@@ -3,7 +3,7 @@
 @section('content')
 <div class="card card-style">
     <div class="content text-center">
-        <a href="{{ route('courses') }}" class="font-12 w-100">Enroll Course</a>
+        <a href="{{ route('courses') }}" class="font-16 w-100">Enroll Course</a>
     </div>
 </div>
 
