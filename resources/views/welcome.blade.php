@@ -7,29 +7,27 @@
     <div class="single-slider owl-carousel owl-no-dots">
 
         {{-- TODO COURSE LOOP--}}
-        @foreach ($courses['data'] as $course)
-        <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')">
-            <a href="#">
+            @foreach ($courses['data'] as $course)
+            <div class="card card-style bg-19" data-card-height="300" style="background-image:url('{{ $course['thumbnail'] }}')">
+                <a href="{{ route('enroll') }}">
 
+                    <div class="card-top">
+                        <a href="{{ route('enroll') }}" class="icon icon-s bg-white color-black rounded-xl p-2 mt-3 mr-2 float-right">ENROLL</a>
+                    </div>
 
-                <div class="card-top">
-                    <a href="{{ route('enroll') }}" class="icon icon-s bg-white color-black rounded-xl p-2 mt-3 mr-2 float-right">ENROLL</a>
-                </div>
+                    <div class="card-bottom mb-3 ml-3 mr-3">
+                        <p class="color-white font-14 mb-2 opacity-60">
+                            course
+                        </p>
+                        <h1 class="color-white font-800 mb-n2">{{ $course['name'] }}</h1>
+                        <p class="color-white font-14 mb-2 opacity-60">
+                            ৳{{$course['price']}}
+                        </p>
+                    </div>
 
-
-                <div class="card-bottom mb-3 ml-3 mr-3">
-                    <p class="color-white font-14 mb-2 opacity-60">
-                        course
-                    </p>
-                    <h1 class="color-white font-800 mb-n2">{{ $course['name'] }}</h1>
-                    <p class="color-white font-14 mb-2 opacity-60">
-                        ৳{{$course['price']}}
-                    </p>
-                </div>
-            </a>
-            <div class="card-overlay bg-black opacity-60"></div>
-        </div>
-        @endforeach
+                </a>
+            </div>
+            @endforeach
         {{-- TODO --}}
 
 
