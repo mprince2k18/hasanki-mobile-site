@@ -41,7 +41,7 @@
             <a href="{{ route('blog.single', $blog['id']) }}">
                 <div class="card m-0 card-style bg-20" style="background-image:url('{{ $blog['thumbnail'] }}')" data-card-height="250"></div>
                 <h4 class="ml-3">{{ $blog['title'] }}</h4>
-                <span class="ml-3">{{ $blog['user']['name'] }}</span>
+                {{-- <span class="ml-3">{{ $blog['user']['name'] }}</span> --}}
             </a>
         </div>
         @endforeach
